@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "66986772730",
+    "firebase_url": "https://protocol1-27614.firebaseio.com",
+    "project_id": "protocol1-27614",
+    "storage_bucket": "protocol1-27614.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66986772730:android:4655709a6b424f0d",
+        "android_client_info": {
+          "package_name": "com.example.protocol1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66986772730-taie0dn55kmeoo4plkfak1s75i9f896u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDSWBWlx8aw5FesyPsSIVnSIpOAFVWasU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
