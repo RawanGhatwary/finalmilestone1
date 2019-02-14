@@ -12,6 +12,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class listActivity extends Activity  {
     String[] data={"iPhone", "Samsung" ,"Windows","Blueberry","Linux"};
     int[] images={R.drawable.iphone,R.drawable.samsung,R.drawable.wind,R.drawable.blueberry,R.drawable.linux};
@@ -38,6 +40,9 @@ public class listActivity extends Activity  {
 
             }
         });
+        if(!isTaskRoot()){
+            FirebaseAuth.getInstance().signOut();
+        }
 
 
 

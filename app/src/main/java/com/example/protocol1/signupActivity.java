@@ -19,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class signupActivity extends AppCompatActivity implements View.OnClickListener  {
     private EditText email;
     private EditText password;
+    private EditText confirmpass;
     private Button buttonlogin;
     private Button buttonregister;
     private ProgressDialog progressDialog;
@@ -38,8 +39,10 @@ public class signupActivity extends AppCompatActivity implements View.OnClickLis
         progressDialog=new ProgressDialog(this);
         email=(EditText) findViewById(R.id.email);
         password=(EditText) findViewById(R.id.password);
+        confirmpass=(EditText) findViewById(R.id.confirmpass);
         buttonlogin=(Button) findViewById(R.id.buttonlogin);
         buttonregister= (Button) findViewById(R.id.buttonregister);
+
 
 
         buttonregister.setOnClickListener(this);
@@ -52,6 +55,7 @@ public class signupActivity extends AppCompatActivity implements View.OnClickLis
     private void registerUser(){
         String Email=email.getText().toString().trim();
         String Password=password.getText().toString().trim();
+        String Confirmpass=confirmpass.getText().toString().trim();
         if(TextUtils.isEmpty(Email)){
             Toast.makeText(this,"Please enter your E-mail", Toast.LENGTH_LONG).show();
             return;
@@ -59,6 +63,15 @@ public class signupActivity extends AppCompatActivity implements View.OnClickLis
         if(TextUtils.isEmpty(Password)){
             Toast.makeText(this,"Please enter a Password", Toast.LENGTH_LONG).show();
             return;
+        }
+        if(TextUtils.isEmpty(Confirmpass)){
+            Toast.makeText(this,"Please confirm your Password", Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(!(Confirmpass.equals(Password))){
+            Toast.makeText(this,"your confirmation is incorrect", Toast.LENGTH_LONG).show();
+            return;
+
         }
         progressDialog.setMessage("Registration in progress.......");
         progressDialog.show();

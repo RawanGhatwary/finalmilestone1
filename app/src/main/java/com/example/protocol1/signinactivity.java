@@ -31,7 +31,7 @@ public class signinactivity extends AppCompatActivity implements View.OnClickLis
         firebaseAuth1=FirebaseAuth.getInstance();
 
         if(firebaseAuth1.getCurrentUser()!=null){
-            finish();
+            //finish();
             startActivity(new Intent(getApplicationContext(),listActivity.class));
 
         }
@@ -69,7 +69,7 @@ public class signinactivity extends AppCompatActivity implements View.OnClickLis
             public void onComplete(@NonNull Task<AuthResult> task) {
                 progressDialog1.dismiss();
                 if(task.isSuccessful()){
-                    finish();
+                    //finish();
                     startActivity(new Intent(getApplicationContext(),listActivity.class));
                 } else{
                     Toast.makeText(signinactivity.this,"Login failed,try again", Toast.LENGTH_LONG).show();
